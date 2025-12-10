@@ -6,3 +6,19 @@ secret-*.json
 node_modules/
 dist/
 build/
+# Secrets (do not commit)
+.env
+*.key
+*.pem
+*.crt
+secrets/*
+# Node/build artifacts
+node_modules/
+dist/
+build/
+# uploads / media / caches (adjust to your project)
+uploads/
+media/
+tmp/
+*.log
+.DS_Store
