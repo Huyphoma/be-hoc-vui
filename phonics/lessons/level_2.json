@@ -1,0 +1,54 @@
+{
+  "level": 2,
+  "title": "Level 2 - Phonics",
+  "phonemes": [
+    "c",
+    "d",
+    "f",
+    "g",
+    "h",
+    "j"
+  ],
+  "activities": [
+    {
+      "type": "listen",
+      "items": [
+        "audio/c.wav",
+        "audio/d.wav",
+        "audio/f.wav",
+        "audio/g.wav",
+        "audio/h.wav",
+        "audio/j.wav"
+      ]
+    },
+    {
+      "type": "match",
+      "items": [
+        {
+          "word": "c_example",
+          "image": null
+        },
+        {
+          "word": "d_example",
+          "image": null
+        },
+        {
+          "word": "f_example",
+          "image": null
+        },
+        {
+          "word": "g_example",
+          "image": null
+        },
+        {
+          "word": "h_example",
+          "image": null
+        },
+        {
+          "word": "j_example",
+          "image": null
+        }
+      ]
+    }
+  ]
+}

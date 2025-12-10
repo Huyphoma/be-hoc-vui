@@ -1,0 +1,54 @@
+{
+  "level": 1,
+  "title": "Level 1 - Phonics",
+  "phonemes": [
+    "a_short",
+    "e_short",
+    "i_short",
+    "o_short",
+    "u_short",
+    "b"
+  ],
+  "activities": [
+    {
+      "type": "listen",
+      "items": [
+        "audio/a_short.wav",
+        "audio/e_short.wav",
+        "audio/i_short.wav",
+        "audio/o_short.wav",
+        "audio/u_short.wav",
+        "audio/b.wav"
+      ]
+    },
+    {
+      "type": "match",
+      "items": [
+        {
+          "word": "a_short_example",
+          "image": null
+        },
+        {
+          "word": "e_short_example",
+          "image": null
+        },
+        {
+          "word": "i_short_example",
+          "image": null
+        },
+        {
+          "word": "o_short_example",
+          "image": null
+        },
+        {
+          "word": "u_short_example",
+          "image": null
+        },
+        {
+          "word": "b_example",
+          "image": null
+        }
+      ]
+    }
+  ]
+}

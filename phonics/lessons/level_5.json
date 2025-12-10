@@ -1,0 +1,54 @@
+{
+  "level": 5,
+  "title": "Level 5 - Phonics",
+  "phonemes": [
+    "y",
+    "z",
+    "sh",
+    "ch",
+    "th",
+    "ng"
+  ],
+  "activities": [
+    {
+      "type": "listen",
+      "items": [
+        "audio/y.wav",
+        "audio/z.wav",
+        "audio/sh.wav",
+        "audio/ch.wav",
+        "audio/th.wav",
+        "audio/ng.wav"
+      ]
+    },
+    {
+      "type": "match",
+      "items": [
+        {
+          "word": "y_example",
+          "image": null
+        },
+        {
+          "word": "z_example",
+          "image": null
+        },
+        {
+          "word": "sh_example",
+          "image": null
+        },
+        {
+          "word": "ch_example",
+          "image": null
+        },
+        {
+          "word": "th_example",
+          "image": null
+        },
+        {
+          "word": "ng_example",
+          "image": null
+        }
+      ]
+    }
+  ]
+}

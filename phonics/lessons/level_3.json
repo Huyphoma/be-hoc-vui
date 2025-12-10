@@ -1,0 +1,54 @@
+{
+  "level": 3,
+  "title": "Level 3 - Phonics",
+  "phonemes": [
+    "k",
+    "l",
+    "m",
+    "n",
+    "p",
+    "q"
+  ],
+  "activities": [
+    {
+      "type": "listen",
+      "items": [
+        "audio/k.wav",
+        "audio/l.wav",
+        "audio/m.wav",
+        "audio/n.wav",
+        "audio/p.wav",
+        "audio/q.wav"
+      ]
+    },
+    {
+      "type": "match",
+      "items": [
+        {
+          "word": "k_example",
+          "image": null
+        },
+        {
+          "word": "l_example",
+          "image": null
+        },
+        {
+          "word": "m_example",
+          "image": null
+        },
+        {
+          "word": "n_example",
+          "image": null
+        },
+        {
+          "word": "p_example",
+          "image": null
+        },
+        {
+          "word": "q_example",
+          "image": null
+        }
+      ]
+    }
+  ]
+}

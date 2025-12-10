@@ -1,0 +1,54 @@
+{
+  "level": 4,
+  "title": "Level 4 - Phonics",
+  "phonemes": [
+    "r",
+    "s",
+    "t",
+    "v",
+    "w",
+    "x"
+  ],
+  "activities": [
+    {
+      "type": "listen",
+      "items": [
+        "audio/r.wav",
+        "audio/s.wav",
+        "audio/t.wav",
+        "audio/v.wav",
+        "audio/w.wav",
+        "audio/x.wav"
+      ]
+    },
+    {
+      "type": "match",
+      "items": [
+        {
+          "word": "r_example",
+          "image": null
+        },
+        {
+          "word": "s_example",
+          "image": null
+        },
+        {
+          "word": "t_example",
+          "image": null
+        },
+        {
+          "word": "v_example",
+          "image": null
+        },
+        {
+          "word": "w_example",
+          "image": null
+        },
+        {
+          "word": "x_example",
+          "image": null
+        }
+      ]
+    }
+  ]
+}

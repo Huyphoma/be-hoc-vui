@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-bhv_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-bhv_pass}
+      POSTGRES_DB: ${POSTGRES_DB:-behocvui}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-bhv_user} -d ${POSTGRES_DB:-behocvui}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./be_hoc_vui_backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    env_file:
+      - .env.backend
+    environment:
+      PHONICS_DIR: /phonics
+    volumes:
+      - ./phonics:/app/phonics:ro
+      - ./be_hoc_vui_backend:/app:ro
+    ports:
+      - "8000:8000"
+    command: >
+      sh -c "uvicorn app.main:api --host 0.0.0.0 --port 8000"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/ || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      REACT_APP_API_BASE: ${REACT_APP_API_BASE:-http://localhost:8000}
+    volumes:
+      - ./frontend:/app:ro
+    ports:
+      - "5000:3000"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:3000/ || exit 1"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  pgdata:

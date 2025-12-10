@@ -1,0 +1,8 @@
+{
+  "package_name": "behocvui_phase2_full_phonics",
+  "version": "1.0.0",
+  "created_by": "assistant-generated",
+  "phoneme_count": 30,
+  "levels": 5,
+  "notes": "This package contains placeholder audio (sine beeps). Replace audio/*.wav with real mp3/wav files as needed."
+}

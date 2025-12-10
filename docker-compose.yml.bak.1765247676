@@ -1,0 +1,38 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: behocvui-postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: behocvui
+    volumes:
+      - behocvui_postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  backend:
+    build:
+      context: ./be_hoc_vui_backend
+    container_name: behocvui-backend
+    env_file:
+      - ./be_hoc_vui_backend/.env
+    depends_on:
+      - postgres
+    volumes:
+      - ./be_hoc_vui_backend:/app
+    ports:
+      - "8000:8000"
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: behocvui-frontend
+    depends_on:
+      - backend
+    ports:
+      - "5000:3000"
+
+volumes:
+  behocvui_postgres_data:
